@@ -1,5 +1,5 @@
     #include <iostream>
-       using namespace std;
+    using namespace std;
        
        // Function to generate Fibonacci series up to n terms
        void fibonacci(int n) {
@@ -7,10 +7,10 @@
            
            cout << "Fibonacci Series: ";
            for (int i = 0; i < n; i++) {
-               // FIXME: Print the first term correctly
+               // FIXME: Print the first term correctly---FIXED
                cout << first << " ";
                
-               // FIXME: Compute the next term correctly
+               // FIXME: Compute the next term correctly--FIXED
                next = first + second;
                first = second;
                second = next;
@@ -23,7 +23,7 @@
            cout << "Enter the number of terms: ";
            cin >> n;
            
-           // FIXME: Call the function with correct argument
+           // FIXME: Call the function with correct argument--FIXED
            fibonacci(n);
            
            return 0;
