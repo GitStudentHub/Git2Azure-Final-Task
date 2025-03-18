@@ -15,7 +15,13 @@ public class FibonacciChallenge {
     
     public static int fibonacci(int n) {
         // Fix me: Remember, Fibonacci sequence starts with 0, 1, ...
-        
+        if (n < 0) { //base case added!!
+            throw new IllegalArgumentException("Input cannot be negative.");
+        } else if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
     
@@ -28,20 +34,22 @@ public class FibonacciChallenge {
     }
     
     public static int efficientFibonacci(int n) {
-        // Fix me: How can you avoid recalculating the same Fibonacci numbers repeatedly?
-        int a = 0;
-        int b = 1;
-        
+        if (n < 0) {
+            throw new IllegalArgumentException("Input cannot be negative.");
+        }
         if (n == 0) {
-            return a;
+            return 0;
         }
-        
-        for (int i = 2; i < n; i++) {
-            int temp = a;
+        if (n == 1) {
+            return 1;
+        }
+
+        int a = 0, b = 1;
+        for (int i = 2; i <= n; i++) {  // Loop should run till n
+            int temp = a + b;
             a = b;
-            b = temp + a;
+            b = temp;
         }
-        
         return b;
     }
 }
