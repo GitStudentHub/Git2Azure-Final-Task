@@ -7,11 +7,11 @@
            
            cout << "Fibonacci Series: ";
            for (int i = 0; i < n; i++) {
-               // FIXME: Print the first term correctly
-               cout << "?" << " ";
+               // Print the first term 
+               cout << first << " ";
                
-               // FIXME: Compute the next term correctly
-               next = ?;
+               // Compute the next term 
+               next = first + second;
                first = second;
                second = next;
            }
@@ -23,8 +23,8 @@
            cout << "Enter the number of terms: ";
            cin >> n;
            
-           // FIXME: Call the function with correct argument
-           fibonacci(?);
+           //Calling the function 
+           fibonacci(n);
            
            return 0;
        }
