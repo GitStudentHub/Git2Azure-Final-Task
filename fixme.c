@@ -9,8 +9,8 @@ int fibonacci(int n) {
         temp = a + b;
         a = b;
         b = temp;
-        return b; //Fix me
     }
+    return b; 
 }
 
 int main() {
