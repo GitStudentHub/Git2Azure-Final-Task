@@ -1,4 +1,4 @@
-public class FibonacciChallenge {
+public class fixme {
     
     public static void main(String[] args) {
         // Fix me: Should we allow negative numbers as input?
