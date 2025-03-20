@@ -6,12 +6,12 @@
            int first = 0, second = 1, next;
            
            cout << "Fibonacci Series: ";
-           for (int i = 0; i < n; i++) {
-               // FIXME: Print the first term correctly
-               cout << "?" << " ";
+           for (int i = 0; i < n+1; i++) {// changed i<n to i<n+1
+               // printed the first term
+               cout << first << " ";
                
-               // FIXME: Compute the next term correctly
-               next = ?;
+               // next = first +second
+               next = first+second;
                first = second;
                second = next;
            }
@@ -23,8 +23,8 @@
            cout << "Enter the number of terms: ";
            cin >> n;
            
-           // FIXME: Call the function with correct argument
-           fibonacci(?);
+           // called the function properly
+           fibonacci(n);
            
            return 0;
        }
