@@ -15,13 +15,20 @@ public class FibonacciChallenge {
     
     public static int fibonacci(int n) {
         // Fix me: Remember, Fibonacci sequence starts with 0, 1, ...
+        if(n == 0){
+            return 0;
+        }
+
+        if(n == 1){
+            return 1;
+        }
         
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
     
     public static void printFibonacciSequence(int n) {
         // Fix me: Off-by-one error?
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.print(fibonacci(i) + " ");
         }
         System.out.println();
@@ -29,17 +36,21 @@ public class FibonacciChallenge {
     
     public static int efficientFibonacci(int n) {
         // Fix me: How can you avoid recalculating the same Fibonacci numbers repeatedly?
+        if (n == 0) {
+            return 0;
+        }
+
+        if(n == 1){
+            return 1;
+        }
+
         int a = 0;
         int b = 1;
         
-        if (n == 0) {
-            return a;
-        }
-        
         for (int i = 2; i < n; i++) {
-            int temp = a;
+            int temp = a + b;
             a = b;
-            b = temp + a;
+            b = temp;
         }
         
         return b;
