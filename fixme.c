@@ -9,8 +9,8 @@ int fibonacci(int n) {
         temp = a + b;
         a = b;
         b = temp;
-        return b; //Fix me
     }
+    return b; // return b should be after the loop ends
 }
 
 int main() {
